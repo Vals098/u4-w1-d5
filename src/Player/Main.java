@@ -1,28 +1,41 @@
 package Player;
 
 import Player.entities.ElementoMultimediale;
-import Player.entities.Immagine;
-import Player.entities.RegistrazioneAudio;
-import Player.entities.Video;
+
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
         ElementoMultimediale[] elementi = new ElementoMultimediale[5];
 
-        elementi[0] = new Video("video1");
-        elementi[1] = new RegistrazioneAudio("audio1");
-        elementi[2] = new Immagine("img1");
-        elementi[3] = new Video("video2");
-        elementi[4] = new Immagine("img2");
+//        elementi[0] = new Video("video1");
+//        elementi[1] = new RegistrazioneAudio("audio1");
+//        elementi[2] = new Immagine("img1");
+//        elementi[3] = new Video("video2");
+//        elementi[4] = new Immagine("img2");
 
-//        for (ElementoMultimediale elemento : elementi) {
-//            System.out.println(elemento.getTitolo());
-//        }
 
-        elementi[0].esegui();
-        elementi[1].esegui();
-        elementi[2].esegui();
-        elementi[3].esegui();
-        elementi[4].esegui();
+        Scanner scanner = new Scanner(System.in);
+
+//da input utente a elementi dell'array ElementoMultimediale
+        
+
+//da input numerico a esegui()
+        int scelta;
+
+        do {
+            System.out.println("Scegli un elemento da eseguire inserendo un numero da 1 a 5:");
+            System.out.println("Per fermare inseririe 0");
+
+            scelta = Integer.parseInt(scanner.nextLine());
+
+            if (scelta >= 1 && scelta <= 5) {
+                elementi[scelta - 1].esegui();
+            }
+
+        } while (scelta != 0);
+
+
     }
 }

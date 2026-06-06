@@ -1,12 +1,46 @@
 package Player.entities;
 
+import Player.interfaces.Luminosità;
 import Player.interfaces.Playable;
+import Player.interfaces.Volume;
 
-public class Video extends ElementoMultimediale implements Playable {
+public class Video extends ElementoMultimediale implements Playable, Volume, Luminosità {
+
+    //    attributi
+    protected int durata;
+    protected int volume;
+
+
+    //costruttori
     public Video(String titolo) {
         super(titolo);
     }
 
+    //    getter e setter
+    public int getDurata() {
+        return durata;
+    }
+
+    public void setDurata(int durata) {
+        if (durata >= 0) {
+            this.durata = durata;
+        } else {
+            System.out.println("La durata deve essere >= 0");
+        }
+    }
+
+    public int getVolume() {
+        return volume;
+    }
+
+    public void setVolume(int volume) {
+        if (volume >= 0) {
+            this.volume = volume;
+        } else System.out.println("Il volume deve essere >= 0");
+    }
+
+
+    //    metodi
     @Override
     public String toString() {
         return "Video{}";
@@ -20,5 +54,25 @@ public class Video extends ElementoMultimediale implements Playable {
     @Override
     public void play() {
         System.out.println("Riproduzione video: " + titolo);
+    }
+
+    @Override
+    public void aumentaLuminosità() {
+
+    }
+
+    @Override
+    public void diminuisciLuminosità() {
+
+    }
+
+    @Override
+    public void alzaVolume() {
+
+    }
+
+    @Override
+    public void abbassaVolume() {
+
     }
 }
