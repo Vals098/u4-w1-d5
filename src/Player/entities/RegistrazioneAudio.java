@@ -9,7 +9,7 @@ public class RegistrazioneAudio extends ElementoMultimediale implements Playable
     protected int volume;
 
     //costruttori
-    public RegistrazioneAudio(String titolo) {
+    public RegistrazioneAudio(String titolo, int durata, int volume) {
         super(titolo);
         setDurata(durata);
         setVolume(volume);
@@ -50,18 +50,6 @@ public class RegistrazioneAudio extends ElementoMultimediale implements Playable
         play();
     }
 
-    @Override
-    public void play() {
-//        ripete un numero di volte = alla durata la stampa del titolo concatenato a
-//        una sequenza di punti esclamativi di lunghezza pari al volume
-        for (int i = 0; i < durata; i++) {
-            String puntiEsclamativi = "";
-            for (int j = 0; j < volume; j++) {
-                puntiEsclamativi += "!";
-            }
-            System.out.println(titolo + puntiEsclamativi);
-        }
-    }
 
     @Override
     public void alzaVolume() {

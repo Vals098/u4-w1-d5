@@ -53,7 +53,9 @@ public class Video extends ElementoMultimediale implements Playable, Volume, Lum
 
     @Override
     public void play() {
-        System.out.println("Riproduzione video: " + titolo);
+        Playable.super.play();
+        
+
     }
 
     @Override

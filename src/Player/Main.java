@@ -1,6 +1,9 @@
 package Player;
 
 import Player.entities.ElementoMultimediale;
+import Player.entities.Immagine;
+import Player.entities.RegistrazioneAudio;
+import Player.entities.Video;
 
 import java.util.Scanner;
 
@@ -8,18 +11,19 @@ public class Main {
     public static void main(String[] args) {
 
         ElementoMultimediale[] elementi = new ElementoMultimediale[5];
+//        RegistrazioneAudio audio = new RegistrazioneAudio("Bohemian Rapsody", 5, 7);
 
-//        elementi[0] = new Video("video1");
-//        elementi[1] = new RegistrazioneAudio("audio1");
-//        elementi[2] = new Immagine("img1");
-//        elementi[3] = new Video("video2");
-//        elementi[4] = new Immagine("img2");
+        elementi[0] = new Video("video1");
+        elementi[1] = new RegistrazioneAudio("Bohemian Rapsody", 5, 7);
+        elementi[2] = new Immagine("img1");
+        elementi[3] = new Video("video2");
+        elementi[4] = new Immagine("img2");
 
 
         Scanner scanner = new Scanner(System.in);
 
 //da input utente a elementi dell'array ElementoMultimediale
-        
+
 
 //da input numerico a esegui()
         int scelta;
