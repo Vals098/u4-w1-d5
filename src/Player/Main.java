@@ -33,7 +33,7 @@ public class Main {
 
             int tipo = Integer.parseInt(scanner.nextLine());
 
-//        casi
+//      3  casi
             switch (tipo) {
                 case 1: {//audio
                     System.out.println("Scegli un titolo:");
@@ -78,6 +78,7 @@ public class Main {
                 }
                 default:
                     System.out.println("Tipo non valido");
+                    i--;
             }
         }
 

@@ -7,12 +7,12 @@ import Player.interfaces.Volume;
 public class Video extends ElementoMultimediale implements Playable, Volume, Brightness {
 
     //    attributi
-    protected int duration;
-    protected int volume;
-    protected int brightness;
+    private int duration;
+    private int volume;
+    private int brightness;
 
 
-    //costruttori
+    //    costruttori
     public Video(String title, int volume, int duration, int brightness) {
         super(title);
         setVolume(volume);

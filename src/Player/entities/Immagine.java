@@ -6,7 +6,7 @@ import Player.interfaces.Showable;
 public class Immagine extends ElementoMultimediale implements Showable, Brightness {
 
     //    attributi
-    protected int brightness;
+    private int brightness;
 
     //    costruttori
     public Immagine(String title, int brightness) {

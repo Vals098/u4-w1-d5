@@ -6,8 +6,8 @@ import Player.interfaces.Volume;
 
 public class Audio extends ElementoMultimediale implements Playable, Volume {
     //attributi
-    protected int duration;
-    protected int volume;
+    private int duration;
+    private int volume;
 
     //costruttori
     public Audio(String title, int duration, int volume) {
