@@ -1,24 +1,21 @@
 package Player.entities;
 
-import Player.interfaces.Brightness;
 import Player.interfaces.Playable;
 import Player.interfaces.Volume;
 
-public class Video extends ElementoMultimediale implements Playable, Volume, Brightness {
 
-    //    attributi
+public class Audio extends ElementoMultimediale implements Playable, Volume {
+    //attributi
     protected int duration;
     protected int volume;
-    protected int brightness;
-
 
     //costruttori
-    public Video(String title, int volume, int duration, int brightness) {
+    public Audio(String title, int duration, int volume) {
         super(title);
-        setVolume(volume);
         setDuration(duration);
-        setBrightness(brightness);
+        setVolume(volume);
     }
+
 
     //    getter e setter
     public int getDuration() {
@@ -43,11 +40,10 @@ public class Video extends ElementoMultimediale implements Playable, Volume, Bri
         } else System.out.println("Il volume deve essere >= 0");
     }
 
-
     //    metodi
     @Override
     public String toString() {
-        return "Video{}";
+        return "Audio{}";
     }
 
     @Override
@@ -57,6 +53,8 @@ public class Video extends ElementoMultimediale implements Playable, Volume, Bri
 
     @Override
     public void play() {
+        // ripete un numero di volte = alla duration la stampa del title concatenato a
+        // una sequenza di punti esclamativi di lunghezza pari al volume
         for (int i = 0; i < duration; i++) {
 
             String puntiEsclamativi = "";
@@ -64,25 +62,7 @@ public class Video extends ElementoMultimediale implements Playable, Volume, Bri
                 puntiEsclamativi += "!";
             }
 
-            String asterischi = "";
-            for (int j = 0; j < brightness; j++) {
-                asterischi += "*";
-            }
-
-            System.out.println(title + puntiEsclamativi + asterischi);
+            System.out.println(title + puntiEsclamativi);
         }
     }
-
-    @Override
-    public int getBrightness() {
-        return brightness;
-    }
-
-    @Override
-    public void setBrightness(int brightness) {
-        if (brightness >= 0) {
-            this.brightness = brightness;
-        } else System.out.println("La brightness deve essere >= 0");
-    }
-
 }

@@ -1,16 +1,16 @@
 package Player.entities;
 
-import Player.interfaces.Luminosità;
+import Player.interfaces.Brightness;
 import Player.interfaces.Showable;
 
-public class Immagine extends ElementoMultimediale implements Showable, Luminosità {
+public class Immagine extends ElementoMultimediale implements Showable, Brightness {
 
     //    attributi
-    protected int[] asterischi;
+
 
     //    costruttori
-    public Immagine(String titolo) {
-        super(titolo);
+    public Immagine(String title) {
+        super(title);
     }
 
 //    getter e setter
@@ -28,16 +28,17 @@ public class Immagine extends ElementoMultimediale implements Showable, Luminosi
 
     @Override
     public void show() {
-        System.out.println(titolo);
+        System.out.println(title);
+    }
+
+
+    @Override
+    public int getBrightness() {
+        return 0;
     }
 
     @Override
-    public void aumentaLuminosità() {
-
-    }
-
-    @Override
-    public void diminuisciLuminosità() {
+    public void setBrightness(int brightness) {
 
     }
 }

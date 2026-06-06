@@ -1,8 +1,8 @@
 package Player;
 
+import Player.entities.Audio;
 import Player.entities.ElementoMultimediale;
 import Player.entities.Immagine;
-import Player.entities.RegistrazioneAudio;
 import Player.entities.Video;
 
 import java.util.Scanner;
@@ -13,10 +13,10 @@ public class Main {
         ElementoMultimediale[] elementi = new ElementoMultimediale[5];
 //        RegistrazioneAudio audio = new RegistrazioneAudio("Bohemian Rapsody", 5, 7);
 
-        elementi[0] = new Video("video1");
-        elementi[1] = new RegistrazioneAudio("Bohemian Rapsody", 5, 7);
+        elementi[0] = new Video("video1", 4, 6, 1);
+        elementi[1] = new Audio("Bohemian Rapsody", 5, 7);
         elementi[2] = new Immagine("img1");
-        elementi[3] = new Video("video2");
+        elementi[3] = new Video("video2", 1, 0, 5);
         elementi[4] = new Immagine("img2");
 
 

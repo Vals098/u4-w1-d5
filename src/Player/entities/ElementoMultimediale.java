@@ -3,21 +3,21 @@ package Player.entities;
 public abstract class ElementoMultimediale {
 
     //    attributi comuni a tutti gli ElementiMultimediali
-    protected String titolo;
+    protected String title;
 
     //    costruttore di ElementiMultimediali
-    public ElementoMultimediale(String titolo) {
-        this.titolo = titolo;
+    public ElementoMultimediale(String title) {
+        this.title = title;
     }
 
 
     //getter e setter
-    public String getTitolo() {
-        return titolo;
+    public String getTitle() {
+        return title;
     }
 
-    public void setTitolo(String titolo) {
-        this.titolo = titolo;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     //    metodi comuni
