@@ -9,8 +9,9 @@ public class Immagine extends ElementoMultimediale implements Showable, Brightne
     protected int brightness;
 
     //    costruttori
-    public Immagine(String title) {
+    public Immagine(String title, int brightness) {
         super(title);
+        setBrightness(brightness);
     }
 
 //    getter e setter
@@ -40,7 +41,7 @@ public class Immagine extends ElementoMultimediale implements Showable, Brightne
 
     @Override
     public int getBrightness() {
-        return 0;
+        return brightness;
     }
 
     @Override

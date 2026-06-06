@@ -11,13 +11,12 @@ public class Main {
     public static void main(String[] args) {
 
         ElementoMultimediale[] elementi = new ElementoMultimediale[5];
-//        RegistrazioneAudio audio = new RegistrazioneAudio("Bohemian Rapsody", 5, 7);
 
         elementi[0] = new Video("video1", 4, 6, 1);
         elementi[1] = new Audio("Bohemian Rapsody", 5, 7);
-        elementi[2] = new Immagine("img1");
+        elementi[2] = new Immagine("img1", 5);
         elementi[3] = new Video("video2", 1, 0, 5);
-        elementi[4] = new Immagine("img2");
+        elementi[4] = new Immagine("img2", 0);
 
 
         Scanner scanner = new Scanner(System.in);
