@@ -10,14 +10,18 @@ public abstract class ElementoMultimediale {
         this.titolo = titolo;
     }
 
+
     //getter e setter
     public String getTitolo() {
         return titolo;
     }
 
-    public void setTitolo() {
+    public void setTitolo(String titolo) {
         this.titolo = titolo;
     }
+
+    //    metodi comuni
+    public abstract void esegui();
 }
 
 
