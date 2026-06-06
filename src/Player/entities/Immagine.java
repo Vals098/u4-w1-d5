@@ -6,7 +6,7 @@ import Player.interfaces.Showable;
 public class Immagine extends ElementoMultimediale implements Showable, Brightness {
 
     //    attributi
-
+    protected int brightness;
 
     //    costruttori
     public Immagine(String title) {
@@ -28,7 +28,13 @@ public class Immagine extends ElementoMultimediale implements Showable, Brightne
 
     @Override
     public void show() {
-        System.out.println(title);
+
+        String asterischi = "";
+        for (int i = 0; i < brightness; i++) {
+            asterischi += "*";
+        }
+
+        System.out.println(title + asterischi);
     }
 
 
@@ -39,6 +45,8 @@ public class Immagine extends ElementoMultimediale implements Showable, Brightne
 
     @Override
     public void setBrightness(int brightness) {
-
+        if (brightness >= 0) {
+            this.brightness = brightness;
+        } else System.out.println("La luminosità deve essere >= 0");
     }
 }
