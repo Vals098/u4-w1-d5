@@ -47,7 +47,12 @@ public class Video extends ElementoMultimediale implements Playable, Volume, Bri
     //    metodi
     @Override
     public String toString() {
-        return "Video{}";
+        return "Video{" +
+                "title='" + title + '\'' +
+                ", duration=" + duration +
+                ", volume=" + volume +
+                ", brightness=" + brightness +
+                '}';
     }
 
     @Override
@@ -82,7 +87,7 @@ public class Video extends ElementoMultimediale implements Playable, Volume, Bri
     public void setBrightness(int brightness) {
         if (brightness >= 0) {
             this.brightness = brightness;
-        } else System.out.println("La brightness deve essere >= 0");
+        } else System.out.println("La luminosità deve essere >= 0");
     }
 
 }

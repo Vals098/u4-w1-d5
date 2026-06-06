@@ -19,7 +19,10 @@ public class Immagine extends ElementoMultimediale implements Showable, Brightne
     //metodi
     @Override
     public String toString() {
-        return "Immagine{}";
+        return "Immagine{" +
+                "title='" + title + '\'' +
+                ", brightness=" + brightness +
+                '}';
     }
 
     @Override

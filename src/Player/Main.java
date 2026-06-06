@@ -35,6 +35,10 @@ public class Main {
 
             if (scelta >= 1 && scelta <= 5) {
                 elementi[scelta - 1].esegui();
+            } else if (scelta < 0) {
+                System.out.println("Errore: numero troppo piccolo");
+            } else if (scelta > 5) {
+                System.out.println("Errore: numero troppo grande");
             }
 
         } while (scelta != 0);

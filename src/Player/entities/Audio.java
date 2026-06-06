@@ -26,7 +26,7 @@ public class Audio extends ElementoMultimediale implements Playable, Volume {
         if (duration >= 0) {
             this.duration = duration;
         } else {
-            System.out.println("La duration deve essere >= 0");
+            System.out.println("La durata deve essere >= 0");
         }
     }
 
@@ -43,7 +43,11 @@ public class Audio extends ElementoMultimediale implements Playable, Volume {
     //    metodi
     @Override
     public String toString() {
-        return "Audio{}";
+        return "Audio{" +
+                "title='" + title + '\'' +
+                ", duration=" + duration +
+                ", volume=" + volume +
+                '}';
     }
 
     @Override
